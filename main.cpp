@@ -1,6 +1,7 @@
 #include
 
-int mian void{
+int main void
+{
 
 
 
