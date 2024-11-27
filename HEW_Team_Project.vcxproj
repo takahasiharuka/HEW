@@ -131,11 +131,14 @@
     <ClInclude Include="BufferHelpers.h" />
     <ClInclude Include="CommonStates.h" />
     <ClInclude Include="DDSTextureLoader.h" />
+    <ClInclude Include="direct3d.h" />
     <ClInclude Include="DirectXHelpers.h" />
     <ClInclude Include="Effects.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="GamePad.h" />
     <ClInclude Include="GeometricPrimitive.h" />
     <ClInclude Include="GraphicsMemory.h" />
+    <ClInclude Include="Input.h" />
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Model.h" />
@@ -151,11 +154,26 @@
     <ClInclude Include="XboxDDSTextureLoader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="direct3d.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
     <None Include="SimpleMath.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="PixelShader.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ps_main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="VertextShader.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vs_main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
