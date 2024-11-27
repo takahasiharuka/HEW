@@ -130,6 +130,7 @@
     <ClInclude Include="Audio.h" />
     <ClInclude Include="BufferHelpers.h" />
     <ClInclude Include="CommonStates.h" />
+    <ClInclude Include="conioex.h" />
     <ClInclude Include="DDSTextureLoader.h" />
     <ClInclude Include="direct3d.h" />
     <ClInclude Include="DirectXHelpers.h" />
@@ -158,6 +159,7 @@
     <ClCompile Include="Audio.cpp" />
     <ClCompile Include="BufferHelpers.cpp" />
     <ClCompile Include="CommonStates.cpp" />
+    <ClCompile Include="conioex.cpp" />
     <ClCompile Include="DDSTextureLoader.cpp" />
     <ClCompile Include="direct3d.cpp" />
     <ClCompile Include="DirectXHelpers.cpp" />
