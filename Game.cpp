@@ -81,11 +81,7 @@ void Game::Update(void) {
 	case 0://タイトル画面
 		if (input.GetKeyTrigger(VK_3)) {
 			scene = 1;
-			for (int x = 0; x < STAGE_X; x++) {
-				for (int y = 0; y < STAGE_Y + 3; y++) {
-					data[x][y] = 0;
-				}
-			}
+			
 			state = 0;
 			score - 0;
 		}
@@ -279,18 +275,7 @@ void Game::Update(void) {
 		player.SetPos(pos.x, pos.y, pos.z);
 		player2.SetPos(pos2.x, pos2.y, pos2.z);
 		player3.SetPos(pos3.x, pos3.y, pos3.z);
-		for (int x = 0; x < STAGE_X; x++) {
-			for (int y = 0; y < STAGE_Y; y++) {
-				switch (data[x][y]) {
-				case 0:
-					blocks[x][y].SetColor(1.0f, 1.0f, 1.0f, 1.0f);
-					break;
-				case 1:
-					blocks[x][y].SetColor(1.0f, 1.0f, 1.0f, 1.0f);
-					break;
-				}
-			}
-		}
+		
 	}
 	break;
 	case 2:
@@ -368,7 +353,7 @@ void Game::Uninit(void) {
 	player3.Uninit();
 	background.Uninit();
 	scoreboard.Uninit();
-	ef.Uninit();
+	//ef.Uninit();
 	//ブロックを終了
 	for (int x = 0; x < STAGE_X; x++) {
 		for (int y = 0; y < STAGE_Y; y++) {
