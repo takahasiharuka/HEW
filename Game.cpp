@@ -5,7 +5,6 @@
 //#include "Input.h"
 #include "Keyboard.h"
 #include "Audio.h"
-
 int YokoX = YOKO_X; // 現在の地面の横幅
 int YokoY = YOKO_Y; // 現在の地面の高さ
 int TateX = TATE_X;
@@ -42,7 +41,7 @@ void Game::Init(HWND hWnd) {
 	// 背景やその他オブジェクトの初期化
 	background.Init(L"asset/stage.jpg");
 	background.SetPos(0.0f, 0.0f, 0.0f);
-	background.SetSize(640.0f, 480.0f, 0.0f);
+	background.SetSize(2000.0f, 1300.0f, 0.0f);
 
 	scoreboard.Init(L"asset/number.png", 10, 1);
 	scoreboard.SetPos(-145.0f, 200.0f, 0.0f);
@@ -50,11 +49,15 @@ void Game::Init(HWND hWnd) {
 
 	title.Init(L"asset/Title.png");
 	title.SetPos(0.0f, 0.0f, 0.0f);
-	title.SetSize(640.0f, 480.0f, 0.0f);
+	title.SetSize(1920.0f, 1080.0f, 0.0f);
 
 	pause.Init(L"asset/haikei.png");
 	pause.SetPos(0.0f, 0.0f, 0.0f);
-	pause.SetSize(640.0f, 480.0f, 0.0f);
+	pause.SetSize(1920.0f, 1080.0f, 0.0f);
+
+	result.Init(L"asset/result1.png");
+	result.SetPos(0.0f, 0.0f, 0.0f);
+	result.SetSize(1920.0f, 1080.0f, 0.0f);
 
 	// ステージの床の初期化
 	for (int x = 0; x < STAGE_X; x++) {
@@ -81,7 +84,7 @@ void Game::Init(HWND hWnd) {
 			blocks[x + YokoX][y].SetSize(BLOCK_SIZE, BLOCK_SIZE, 0.0f);
 		}
 	}
-	tyu.Init(L"asset/krober.png");
+	tyu.Init(L"asset/krober.jpg");
 	tyu.SetPos(-5.0f, -135.0f, 0.0f); // 横ブロックと縦ブロックの交点に配置
 	tyu.SetSize(10.0f, 10.0f, 0.0f);
 
